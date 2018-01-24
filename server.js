@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var fs = require('fs');
 var http = require('http');
+var _const = require('./system/system.js');
 
 /* app epress */
 var app = express();
@@ -17,11 +18,11 @@ app.get('*', function(req, res) {
 });
 
 /* port and repo */
-var PORT = process.env.PORT || 3100;
+var PORT = global.url.PORT;
 var server = http.createServer(app);
 
 /* Server listen */
 server.listen(PORT, function() {
   //Log iinit Server
-  console.log('Server is running at localhost: ' + PORT + ' ->> http://localhost:' + PORT);
+  console.log('Server is running at ->> ' + global.url.BASE_URL + ' or port: '+ PORT);
 });

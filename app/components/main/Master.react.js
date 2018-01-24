@@ -2,7 +2,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
-//Importar component
+//Import component
 import Main from '../template/Main.react';
 
 /*reac*/

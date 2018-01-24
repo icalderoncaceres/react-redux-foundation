@@ -1,4 +1,5 @@
 /* webpack import */
+var _system = require('./system/system');
 var webpack = require('webpack');
 var path = require('path');
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
@@ -7,19 +8,18 @@ var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   entry: "./app/conf/app.js",
   output: {
-    path: path.join(__dirname, 'public/dist/js'),
-    filename: "bundle.min.js",
+    path: path.join(__dirname, 'app/src/js'),
+    filename: "bundle.js",
     publicPath: "/"
   },
 
-  plugins: process.env.NODE_ENV === 'production'
+  plugins: global.enviroment == 'prod'
     ? [
       new webpack.DefinePlugin({
         "process.env": {
           NODE_ENV: JSON.stringify("production")
         }
       }),
-      new webpack.optimize.DedupePlugin(),
       new webpack.optimize.OccurrenceOrderPlugin(),
       new webpack.optimize.UglifyJsPlugin()
     ]
