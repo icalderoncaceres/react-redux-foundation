@@ -37,8 +37,6 @@ function _filename_debug() {
     _conf.outputFile =  _conf.fileName + "-debug.js";
   }
 
-  console.log(_conf.outputFile);
-
   _conf.fileName = _conf.fileName + ".js";
 
 }

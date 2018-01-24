@@ -1,11 +1,8 @@
 /* import dependencies */
 import React from 'react';
-import {BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 
-//Import component
-import Main from '../template/Main.react';
-
-/*reac*/
+/* reac */
 class Master extends React.Component {
 
   //Contructor
@@ -15,15 +12,21 @@ class Master extends React.Component {
   }
 
   /* Mpount view */
-  render(){
-    /*Create component*/
-    return (
-      <Router>
-          <div>
-            ajustes de new router
-          </div>
-      </Router>
-     )
+  render() {
+    /* Create component */
+    return (<Router>
+      <section className="section">
+        <div className="container">
+          <h1 className="title">
+            
+            <small> Welcome to </small>  React Ethereal
+          </h1>
+          <p className="subtitle">
+            My first website with <strong>React</strong>!
+          </p>
+        </div>
+      </section>
+    </Router>)
   }
 }
 
