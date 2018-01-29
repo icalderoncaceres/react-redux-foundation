@@ -1,5 +1,5 @@
 /* Using enviroment */
-global.enviroment = 'prod';
+global.enviroment = 'dev';
 
 /* Using to export constants */
 const conf = {dev: {}, prod: {}}

@@ -73,10 +73,13 @@ gulp.task('compile-css', function() {
 /* default task */
 gulp.task('default', ['compile-js', 'compile-index', 'compile-css'], function(){
   //REtunr watch
+});
+gulp.task('watch', ['compile-js', 'compile-index', 'compile-css'], function(){
+  //REtunr watch
 
     gulp.watch([path.join(__dirname, 'public/src/css/*.less'), path.join(__dirname, 'public/src/css/*.css')], ['compile-css']);
     gulp.watch(path.join(__dirname, 'public/index.dev.html'), ['compile-index']);
     gulp.watch(path.join(__dirname, 'public/src/js/*.js'), ['compile-js']);
-  
+
 
 });

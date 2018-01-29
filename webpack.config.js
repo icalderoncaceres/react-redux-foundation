@@ -6,7 +6,7 @@ var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 /* Export modules de info */
 module.exports = {
-  entry: "./app/components/app.js",
+  entry: "./app/index.js",
   output: {
     path: path.join(__dirname, 'public/src/js'),
     filename: "bundle.js",
