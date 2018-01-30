@@ -21283,7 +21283,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _ChatList = __webpack_require__(407);
+var _ChatList = __webpack_require__(408);
 
 var _ChatList2 = _interopRequireDefault(_ChatList);
 
@@ -21314,13 +21314,8 @@ var App = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
-        'Intento 10 de redux',
-        _react2.default.createElement(
-          'div',
-          { className: 'container' },
-          _react2.default.createElement(_ChatList2.default, null)
-        )
+        { id: '_chat-main', className: 'is-varable is-2' },
+        _react2.default.createElement(_ChatList2.default, null)
       );
     }
   }]);
@@ -23653,7 +23648,8 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 }
 
 /***/ }),
-/* 407 */
+/* 407 */,
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23715,7 +23711,7 @@ var ChatList = function (_React$Component) {
       var _node = this.props.chats.map(function (item, i) {
         return _react2.default.createElement(
           'div',
-          { className: 'column', key: i },
+          { key: i },
           item.name
         );
       }, this);
@@ -23730,12 +23726,8 @@ var ChatList = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'container' },
-        _react2.default.createElement(
-          'div',
-          { className: 'columns' },
-          this._nodeMsM()
-        )
+        { className: 'column is-4' },
+        this._nodeMsM()
       );
     }
   }]);

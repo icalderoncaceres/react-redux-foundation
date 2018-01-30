@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import * as ChatActions from '../actions/ChatActions';
+import * as ChatActions from '../../actions/ChatActions';
 
 /* class render */
 class ChatList extends React.Component {
@@ -18,7 +18,7 @@ class ChatList extends React.Component {
   _nodeMsM() {
     /* iterate */
     var _node = this.props.chats.map((item, i) => {
-      return (<div className="column" key={i}>{item.name}</div>)
+      return (<div key={i}>{item.name}</div>)
     }, this);
 
     return _node;
@@ -26,10 +26,9 @@ class ChatList extends React.Component {
 
   /* render */
   render() {
-    return (<div className="container">
-      <div className="columns">
+    return (<div className="column is-4">
         {this._nodeMsM()}
-      </div>
+
 
     </div>)
   }

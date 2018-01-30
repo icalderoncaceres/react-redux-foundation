@@ -1,6 +1,6 @@
 /* import app */
 import React from 'react';
-import ChatList from '../components/ChatList.react';
+import ChatList from '../components/chat/ChatList.react';
 
 class App extends React.Component {
   /* Super contruct */
@@ -10,11 +10,8 @@ class App extends React.Component {
 
   /* render */
   render() {
-    return (<div>
-      Intento 10 de redux
-      <div className="container">
-        <ChatList />
-      </div>
+    return (<div id="_chat-main" className="is-varable is-2">
+      <ChatList/>
     </div>);
   }
 }
