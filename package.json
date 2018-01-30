@@ -9,6 +9,7 @@
     "build:dev": "NODE_WATCH=true gulp"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "bulma": "^0.6.2",
     "express": "^4.16.2",
     "path": "^0.12.7",
@@ -29,7 +30,7 @@
     "gulp-rename": "^1.2.2",
     "merge-stream": "^1.0.1",
     "gulp-minify-css": "^1.2.4",
-    "redux-logger": "^3.10.0"
+    "redux-logger": "^3.0.6"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",

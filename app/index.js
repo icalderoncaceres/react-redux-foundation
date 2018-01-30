@@ -1,22 +1,22 @@
-import React from 'react'
-import {render} from 'react-dom'
-import {createStore, applyMiddleware} from 'redux'
-import {Provider} from 'react-redux'
-import {createLogger} from 'redux-logger'
-import thunk from 'redux-thunk'
-import reducer from './reducers'
-import {getAllProducts} from './actions'
-import App from './containers/App'
+/* dependencies */
+import React from 'react';
+import '../system/system';
+import { render } from 'react-dom';
+import configureStore from './store/configureStore';
+import { Provider } from 'react-redux';
+import { loadChats } from './actions/ChatActions';
+import App from './containers/App.react';
 
-const middleware = [thunk];
-if (process.env.NODE_ENV !== 'production') {
-  middleware.push(createLogger());
-}
+/* const store */
+const store = configureStore();
 
-const store = createStore(reducer, applyMiddleware(...middleware))
+/* store call first comm */
+store.dispatch(loadChats());
 
-store.dispatch(getAllProducts())
-
-render(<Provider store={store}>
-  <App/>
-</Provider>, document.getElementById('main-app'))
+/* render */
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('main-app')
+);

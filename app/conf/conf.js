@@ -7,7 +7,7 @@ const conf = {dev: {}, prod: {}}
 /* Enviroment on development */
 conf['dev']['base_url'] = 'http://localhost';
 conf['dev']['port'] = '3100';
-conf['dev']['apiServer'] = '';
+conf['dev']['apiServer'] = 'http://127.0.0.1:3100';
 conf['dev']['fileName'] = 'all_dist';
 conf['dev']['minify'] = true;
 
