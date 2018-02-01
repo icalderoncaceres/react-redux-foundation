@@ -3,7 +3,7 @@ import React from 'react';
 
 
 /*ecport class*/
-export default class ChatContainer extends React.Component {
+class ChatContainer extends React.Component {
   /* Constructor */
   constructor() {
     super(); //Call parent
@@ -12,7 +12,10 @@ export default class ChatContainer extends React.Component {
   /* render */
   render(){
     return(
-      
+      <div className="column">dfasdfas</div>
     )
   }
 }
+
+/* export default */
+export default ChatContainer;

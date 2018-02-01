@@ -8,8 +8,45 @@ html {
 
 body {
   background-color: #fff;
+  font-family: 'Roboto', sans-serif;
 }
 
 #main-app {
-  
+  background-color: #fff;
+  height: 100%;
+
+  #_chat-main {
+    height: 100%;
+
+    .all-app-content {
+      height: 100%;
+
+      .left-pane-content {
+        background: #fff;
+        border-right: 1px solid #ececec;
+
+        .chat-header-ls {
+          padding: 10px;
+          background-color: #eee;
+
+          .media {
+            .img-rounded {
+              border-radius: 50%;
+            }
+          }
+        }
+
+        .chat-search-ls {
+          border-top: 1px solid #ececec;
+          border-bottom: 1px solid #ececec;
+          background-color: #fbfbfb;
+
+          input {
+            box-shadow: none;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
 }
