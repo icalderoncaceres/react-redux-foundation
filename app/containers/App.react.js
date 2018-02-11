@@ -1,22 +1,28 @@
-/* import app */
 import React from 'react';
-import ChatList from '../components/chat/ChatList.react';
-import Chat from './Chat.react';
+import {Route, Switch} from 'react-router';
 
+/* rutes */
+import PrivateRoute from './session/PrivateRoute.react';
+import Login from './login/Login.react';
+import Home from './home/Home.react';
+import Chat from './chat/Chat.react'
 
 class App extends React.Component {
-  /* Super contruct */
   constructor() {
     super();
   }
 
-  /* render */
   render() {
     return (<div id="_chat-main">
-      <Chat/>
-    </div>);
+
+      <Switch>
+        <Route path="/login" component={Login}/>
+        <PrivateRoute exact={true} path="/" component={Chat}/>
+        <PrivateRoute path="/test" component={Home}/>
+      </Switch>
+    </div>)
   }
 }
 
-/* render app export */
+/* default export */
 export default App;

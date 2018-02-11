@@ -1,21 +1,19 @@
 /* import actions */
-import axios from 'axios';
+import Server from './ServerApi';
 
-
-class ChatApi {
+/* class api */
+class ChatApi extends Server{
 
   /* firt entry */
   constructor() {
-    this.req = axios.create({
-      baseURL: global.conf.apiServer
-    });
+    super();
   }
 
 
   /* Fetch all chat */
   fetchAllChats(success){
-    this.req.get('/api/chat.json').then((response)=>{
-      success(response.data);
+    this.req.get('/message/list').then((response)=>{
+      success(response.data.data);
     }).catch((err)=>{
       success(null, err);
     });

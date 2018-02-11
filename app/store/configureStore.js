@@ -1,15 +1,25 @@
 /* import dependencies */
-import {createStore, applyMiddleware} from 'redux';
+import {createStore, applyMiddleware, combineReducers} from 'redux';
 import rootReducer from '../reducers/rootReducer';
 import thunk from 'redux-thunk';
-import { createLogger } from 'redux-logger';
+import {createLogger} from 'redux-logger';
 
-/* thunk */
-const middleware = [thunk];
-
-middleware.push(createLogger());
+/* router */
+import {routerReducer, routerMiddleware, push} from 'react-router-redux';
 
 /* export my store */
-export default () => {
-  return createStore(rootReducer, applyMiddleware(...middleware));
+export const configureStore = (history) => {
+
+  /* thunk */
+  const middleware = [thunk, createLogger(), routerMiddleware(history)];
+
+  /* reducers and apply */
+  const allReducer = combineReducers({
+    main: rootReducer,
+    router: routerReducer
+  });
+
+  //REturn middleware
+  return createStore(allReducer, applyMiddleware(...middleware),);
+  // return createStore(rootReducer, applyMiddleware(...middleware));
 };

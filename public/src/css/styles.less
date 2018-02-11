@@ -11,6 +11,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.animate(@thing:all, @time: .3s, @type: ease){
+  transition: @thing @time @type;
+  -webkit-transition: @thing @time @type;
+  -o-transition: @thing @time @type;
+  -moz-transition: @thing @time @type;
+}
+
 #main-app {
   background-color: #fff;
   height: 100%;
@@ -44,6 +51,26 @@ body {
           input {
             box-shadow: none;
             height: auto;
+          }
+        }
+
+        .list-all-chats{
+          .item-chat-last{
+            .animate();
+            border-bottom: 1px solid #e1e1e1;
+            cursor: pointer;
+
+            &:hover{
+              background-color: #f5f5f5;
+            }
+
+            .media{
+              .image{
+                img{
+                  border-radius: 50%;
+                }
+              }
+            }
           }
         }
       }

@@ -12,21 +12,21 @@ class ItemChat extends React.Component {
   /* Render */
   render() {
     var item = this.props.info;
-    return (<div className="column">
+    return (<div className="column item-chat-last">
       <article className="media">
-        <figure className="media-left">
+        {/* <figure className="media-left">
           <p className="image is-64x64">
-            <img src="https://bulma.io/images/placeholders/128x128.png"/>
+            <img src={item.img}/>
           </p>
-        </figure>
+        </figure> */}
         <div className="media-content">
           <div className="content">
             <p>
-              <strong>{item.name}</strong>
-              <small>@{item.name}</small>
-              <small> 31m</small>
+              <strong>{item.id}</strong>
+              <small></small>
+              <small> {item.last_message.timestamp}</small>
               <br/>
-              <small><i className="fa fa-check"></i></small> Lorem ipsum dolor sit amet,
+              <small><i className="fa fa-check"></i></small> {item.last_message.text}
             </p>
           </div>
 

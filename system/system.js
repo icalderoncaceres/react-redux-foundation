@@ -9,7 +9,7 @@ function _base_url() {
   /* main_url */
   var _main_url = (_conf.base_url)
     ? _conf.base_url
-    : 'http://localhost'
+    : 'http://127.0.0.1'
 
   /* var port */
   var _port = _get_port();

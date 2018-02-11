@@ -5,9 +5,9 @@ global.enviroment = 'dev';
 const conf = {dev: {}, prod: {}}
 
 /* Enviroment on development */
-conf['dev']['base_url'] = 'http://localhost';
+conf['dev']['base_url'] = 'http://127.0.0.1';
 conf['dev']['port'] = '3100';
-conf['dev']['apiServer'] = 'http://127.0.0.1:3100';
+conf['dev']['apiServer'] = 'http://localhost:3500';
 conf['dev']['fileName'] = 'all_dist';
 conf['dev']['minify'] = true;
 conf['dev']['mediaApi'] = 'http://127.0.0.1:3100/dist/';
