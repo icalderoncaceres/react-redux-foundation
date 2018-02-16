@@ -33,9 +33,14 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react']
+            presets: ['env', 'react', 'stage-1'],
+            plugins: ["transform-class-properties"]
           }
         }
+      }, {
+        test: /\.css$/,
+        include: /node_modules/,
+        loaders: ['style-loader', 'css-loader']
       }
     ]
   }

@@ -1,10 +1,19 @@
+/* import dependencies */
 import React from 'react';
-import { connect } from 'react-redux';
-import { authSuccess } from '../../actions/session/SessionActions';
+import ItemLogin from '../../components/login/ItemLogin.react';
 
+/* class container */
 class LoginContainer extends React.Component {
+
+  /* render item */
   render() {
-    return <button onClick={this.props.login}>Login Here!</button>
+    return (
+      <div id="_login_itm" className="container">
+        <ItemLogin />
+      </div>
+    );
   }
 }
-export default connect(null, {login: authSuccess})(LoginContainer);
+
+/* extends */
+export default LoginContainer;

@@ -3,8 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import * as ChatActions from '../../actions/chat/ChatActions';
-import ItemChat from './ItemChat.react'
-import { withRouter  } from 'react-router-dom';
+import ItemChat from './ItemChat.react';
+import { withRouter } from 'react-router-dom';
+
+
 
 /* class render */
 class ChatList extends React.Component {
@@ -16,10 +18,12 @@ class ChatList extends React.Component {
     this._nodeMsM = this._nodeMsM.bind(this);
   }
 
+
+
   /* nodelist Chats */
   _nodeMsM() {
     /* iterate */
-    var _node = this.props.chats.map((item, i) => {
+    var _node = this.props.chatsList.map((item, i) => {
       return (<ItemChat key={i} info={item}/>)
     }, this);
 
@@ -29,7 +33,7 @@ class ChatList extends React.Component {
 
   /* render */
   render() {
-    return (<div className="column list-all-chats is-paddingless" >
+    return (<div className="column list-all-chats is-paddingless">
       {this._nodeMsM()}
 
     </div>)
@@ -38,12 +42,12 @@ class ChatList extends React.Component {
 
 /* declare proptypes */
 ChatList.propTypes = {
-  // chats: PropTypes.array.isRequired
+  // chats: PropTypes.array
 };
 
 //
 const mapStateToProps = (state, ownProps) => {
-  return {chats: state.main.chats.list}
+  return {chatsList: state.main.chats.list}
 }
 
 //Export default class

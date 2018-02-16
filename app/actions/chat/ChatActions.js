@@ -14,7 +14,10 @@ const getAllChats = (chats) => {
 
 /* export action */
 export const loadChats = () => {
+
   return (dispatch) =>{
+    console.log('im enter');
+
     return chatApi.fetchAllChats((getChats, err)=>{
       if(!err){
         dispatch(getAllChats(getChats))
@@ -22,6 +25,6 @@ export const loadChats = () => {
         throw(err)
         dispatch(getAllChats([]));
       }
-    })
+    });
   }
 }

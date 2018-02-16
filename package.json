@@ -27,6 +27,7 @@
     "merge-stream": "^1.0.1",
     "path": "^0.12.7",
     "react": "^16.2.0",
+    "react-cookie": "^2.1.2",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
@@ -44,8 +45,10 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
-    "babel-preset-es2017": "^6.24.1"
+    "babel-preset-es2017": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1"
   },
   "repository": {
     "type": "git",

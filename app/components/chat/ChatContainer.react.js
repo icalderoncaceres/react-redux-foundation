@@ -4,10 +4,13 @@ import React from 'react';
 
 /*ecport class*/
 class ChatContainer extends React.Component {
+
   /* Constructor */
   constructor() {
     super(); //Call parent
   }
+
+  /* steg*/
 
   /* render */
   render(){
