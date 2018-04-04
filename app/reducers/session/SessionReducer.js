@@ -1,18 +1,26 @@
 const initialState = {
-  isAuthenticated: false
+  isAuthenticated: false,
+  name: '',
+  email: '',
+  code: ''
 }
+import {AUTH_FAIL, AUTH_SUCCESS} from '../../constants/ActionTypes';
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'AUTH_SUCCESS':
+    case AUTH_SUCCESS:
       return {
         ...state,
-        isAuthenticated: true
+        isAuthenticated: action.exist,
+        name: action.name,
+        email: action.email
       }
-    case 'AUTH_FAIL':
+    case AUTH_FAIL:
       return {
         ...state,
-        isAuthenticated: false
+        isAuthenticated: false,
+        email: action.email,
+        code: action.code
       }
     default:
       return state

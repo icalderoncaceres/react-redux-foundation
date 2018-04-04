@@ -4981,47 +4981,10 @@ Link.contextTypes = {
 
 /***/ }),
 /* 64 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.authFail = exports.authSuccess = undefined;
-
-var _reactRouterRedux = __webpack_require__(24);
-
-/* do authetications */
-var authS = function authS() {
-  return {
-    type: 'AUTH_SUCCESS'
-  };
-}; /* import Users */
-
-
-var authF = function authF() {
-  return {
-    type: 'AUTH_FAIL'
-  };
-};
-
-/* auth success */
-var authSuccess = exports.authSuccess = function authSuccess() {
-  return function (dispatch) {
-    dispatch(authS());
-    dispatch((0, _reactRouterRedux.push)('/'));
-  };
-};
-
-/* auth fail */
-var authFail = exports.authFail = function authFail() {
-  return function (dispatch) {
-    dispatch(authF());
-    dispatch((0, _reactRouterRedux.push)('/login'));
-  };
-};
+throw new Error("Module build failed: SyntaxError: Unterminated string constant (27:13)\n\n\u001b[0m \u001b[90m 25 | \u001b[39m      exist\u001b[33m:\u001b[39m (user \u001b[33m==\u001b[39m \u001b[32m\"f@g.com\"\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m 26 | \u001b[39m      name\u001b[33m:\u001b[39m \u001b[32m'fernando'\u001b[39m\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 | \u001b[39m      email\u001b[33m:\u001b[39m \u001b[32m'user\u001b[39m\n \u001b[90m    | \u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 | \u001b[39m    }\n \u001b[90m 29 | \u001b[39m    \u001b[36mif\u001b[39m(response\u001b[33m.\u001b[39mexist){\n \u001b[90m 30 | \u001b[39m      dispatch(authS(response))\u001b[33m;\u001b[39m\u001b[0m\n");
 
 /***/ }),
 /* 65 */
@@ -27899,16 +27862,43 @@ var Login = function (_React$Component) {
   function Login() {
     _classCallCheck(this, Login);
 
+    var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this));
     /* super */
-    return _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this));
+
+
+    _this.state = {
+      email: ''
+    };
+    return _this;
   }
 
-  /* render */
-
-
   _createClass(Login, [{
+    key: '_handleChange',
+    value: function _handleChange(e) {
+      this.setState({ email: e.target.value });
+    }
+  }, {
+    key: '_login',
+    value: function _login() {
+      this.props.doLogin(this.state.email);
+    }
+
+    /* render */
+
+  }, {
     key: 'render',
     value: function render() {
+
+      var _alert = void 0;
+      if (this.props.code == 999) {
+        _alert = _react2.default.createElement(
+          'div',
+          { className: 'asd' },
+          'No se logueo ',
+          this.props.email
+        );
+      }
+
       /* return */
       return _react2.default.createElement(
         'div',
@@ -27919,7 +27909,7 @@ var Login = function (_React$Component) {
           _react2.default.createElement(
             'p',
             { className: 'control has-icons-left has-icons-right' },
-            _react2.default.createElement('input', { className: 'input', type: 'email', placeholder: 'Email' }),
+            _react2.default.createElement('input', { className: 'input', type: 'email', placeholder: 'Email', value: this.state.email, onChange: this._handleChange.bind(this) }),
             _react2.default.createElement(
               'span',
               { className: 'icon is-small is-left' },
@@ -27944,7 +27934,8 @@ var Login = function (_React$Component) {
               { className: 'icon is-small is-left' },
               _react2.default.createElement('i', { className: 'fas fa-lock' })
             )
-          )
+          ),
+          _alert
         ),
         _react2.default.createElement(
           'div',
@@ -27954,7 +27945,7 @@ var Login = function (_React$Component) {
             { className: 'control' },
             _react2.default.createElement(
               'button',
-              { className: 'button is-success is-12 column', onClick: this.props.login },
+              { className: 'button is-success is-12 column', onClick: this._login.bind(this) },
               'Login'
             )
           )
@@ -27970,13 +27961,24 @@ var Login = function (_React$Component) {
 
 
 Login.propTypes = {
-  login: _propTypes2.default.func.isRequired };
+  doLogin: _propTypes2.default.func.isRequired,
+  email: _propTypes2.default.string.isRequired,
+  exist: _propTypes2.default.bool.isRequired };
 var mapStop = function mapStop(state, ownProps) {
-  return { login: _SessionActions.authSuccess };
+  return { doLogin: _SessionActions.doLogin };
+};
+var mapStatetoProp = function mapStatetoProp(state) {
+  var _state$main$session = state.main.session,
+      name = _state$main$session.name,
+      email = _state$main$session.email,
+      isAuthenticated = _state$main$session.isAuthenticated,
+      code = _state$main$session.code;
+
+  return { name: name, email: email, exist: isAuthenticated, code: code };
 };
 
 /* return */
-exports.default = (0, _reactRedux.connect)(null, mapStop())(Login);
+exports.default = (0, _reactRedux.connect)(mapStatetoProp, mapStop())(Login);
 
 /***/ }),
 /* 148 */
@@ -29742,22 +29744,32 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _ActionTypes = __webpack_require__(71);
+
 var initialState = {
-  isAuthenticated: false
+  isAuthenticated: false,
+  name: '',
+  email: '',
+  code: ''
 };
+
 
 var authReducer = function authReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments[1];
 
   switch (action.type) {
-    case 'AUTH_SUCCESS':
+    case _ActionTypes.AUTH_SUCCESS:
       return _extends({}, state, {
-        isAuthenticated: true
+        isAuthenticated: action.exist,
+        name: action.name,
+        email: action.email
       });
-    case 'AUTH_FAIL':
+    case _ActionTypes.AUTH_FAIL:
       return _extends({}, state, {
-        isAuthenticated: false
+        isAuthenticated: false,
+        email: action.email,
+        code: action.code
       });
     default:
       return state;
