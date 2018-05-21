@@ -11,24 +11,28 @@ class Login extends React.Component {
     doLogin: PropTypes.func.isRequired,
     email: PropTypes.string.isRequired,
     exist: PropTypes.bool.isRequired
-  }
+}
 
   /* constructore */
   constructor() {
     /* super */
-    super();
-
-    this.state = {
-      email: ''
-    }
+      super();
+      this.state = {
+          email: '',
+          password:''
+      }
   }
 
   _handleChange(e){
-    this.setState({email: e.target.value});
-  }
+      this.setState({email: e.target.value});
+    }
+
+  _handleChangePassw(e){
+      this.setState({password: e.target.value});
+    }
 
   _login(){
-    this.props.doLogin(this.state.email);
+      this.props.doLogin(this.state.email,this.state.password);
   }
 
 
@@ -40,23 +44,35 @@ class Login extends React.Component {
        _alert = (<div className="asd">No se logueo {this.props.email}</div>)
     }
 
+
+
+
     /* return */
-    return (<form>
-      <div className="grid-container">
-        <div className="grid-x grid-padding-x">
-          <div className="medium-6 cell">
-            <label>Input Label
-              <input type="text" placeholder=".medium-6.cell" />
-            </label>
-          </div>
-          <div className="medium-6 cell">
-            <label>Input Label
-              <input type="text" placeholder=".medium-6.cell" />
-            </label>
-          </div>
+    return (<div className="row">
+    <div className="columns small-12 large-6 large-offset-3">
+      <div className="card align-center">
+        <div className="card-divider">
+          <h4>Nivel de seguridad</h4>
         </div>
-      </div>
-    </form>);
+        <div className="card-section">
+          <input className="" type="email" placeholder="Email" value={this.state.email} onChange={this._handleChange.bind(this)}  autoComplete="off" />
+          <span className="">
+            <i className="fas fa-envelope"></i>
+          </span>
+          <span className="">
+            <i className="fas fa-check"></i>
+          </span>
+          <input className="" type="password" placeholder="Password" value={this.state.password} onChange={this._handleChangePassw.bind(this)} autoComplete="off" />
+          <span className="">
+            <i className="fas fa-lock"></i>
+          </span>
+          <button className="button column" onClick={this._login.bind(this)}>
+            Login
+          </button>        
+        </div>
+    </div>
+    {_alert}
+  </div></div>);
   }
 }
 

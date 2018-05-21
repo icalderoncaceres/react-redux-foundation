@@ -27855,7 +27855,7 @@ var LoginContainer = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { id: '_login_itm', className: 'container' },
+        { id: '_login_itm', className: 'docs-off-canvas-content off-canvas-content' },
         _react2.default.createElement(_ItemLogin2.default, null)
       );
     }
@@ -27916,7 +27916,8 @@ var Login = function (_React$Component) {
 
 
     _this.state = {
-      email: ''
+      email: '',
+      password: ''
     };
     return _this;
   }
@@ -27927,9 +27928,14 @@ var Login = function (_React$Component) {
       this.setState({ email: e.target.value });
     }
   }, {
+    key: '_handleChangePassw',
+    value: function _handleChangePassw(e) {
+      this.setState({ password: e.target.value });
+    }
+  }, {
     key: '_login',
     value: function _login() {
-      this.props.doLogin(this.state.email);
+      this.props.doLogin(this.state.email, this.state.password);
     }
 
     /* render */
@@ -27950,35 +27956,51 @@ var Login = function (_React$Component) {
 
       /* return */
       return _react2.default.createElement(
-        'form',
-        null,
+        'div',
+        { className: 'row' },
         _react2.default.createElement(
           'div',
-          { className: 'grid-container' },
+          { className: 'columns small-12 large-6 large-offset-3' },
           _react2.default.createElement(
             'div',
-            { className: 'grid-x grid-padding-x' },
+            { className: 'card align-center' },
             _react2.default.createElement(
               'div',
-              { className: 'medium-6 cell' },
+              { className: 'card-divider' },
               _react2.default.createElement(
-                'label',
+                'h4',
                 null,
-                'Input Label',
-                _react2.default.createElement('input', { type: 'text', placeholder: '.medium-6.cell' })
+                'Nivel de seguridad'
               )
             ),
             _react2.default.createElement(
               'div',
-              { className: 'medium-6 cell' },
+              { className: 'card-section' },
+              _react2.default.createElement('input', { className: '', type: 'email', placeholder: 'Email', value: this.state.email, onChange: this._handleChange.bind(this), autoComplete: 'off' }),
               _react2.default.createElement(
-                'label',
-                null,
-                'Input Label',
-                _react2.default.createElement('input', { type: 'text', placeholder: '.medium-6.cell' })
+                'span',
+                { className: '' },
+                _react2.default.createElement('i', { className: 'fas fa-envelope' })
+              ),
+              _react2.default.createElement(
+                'span',
+                { className: '' },
+                _react2.default.createElement('i', { className: 'fas fa-check' })
+              ),
+              _react2.default.createElement('input', { className: '', type: 'password', placeholder: 'Password', value: this.state.password, onChange: this._handleChangePassw.bind(this), autoComplete: 'off' }),
+              _react2.default.createElement(
+                'span',
+                { className: '' },
+                _react2.default.createElement('i', { className: 'fas fa-lock' })
+              ),
+              _react2.default.createElement(
+                'button',
+                { className: 'button column', onClick: this._login.bind(this) },
+                'Login'
               )
             )
-          )
+          ),
+          _alert
         )
       );
     }
