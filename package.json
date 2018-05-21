@@ -1,7 +1,7 @@
 {
-  "name": "react_ethereal",
+  "name": "react-redux-foundation",
   "version": "0.0.1",
-  "description": "A simple architecture based react and reflux",
+  "description": "Simple project which merge three good tools",
   "main": "server.js",
   "scripts": {
     "start": "npm run build && node server.js",
@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "bulma": "^0.6.2",
     "express": "^4.16.2",
+    "foundation-sites": "^6.4.4-rc1",
     "fs": "^0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
@@ -52,15 +52,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://feryara@bitbucket.org/feryara/react_ethereal.git"
+    "url": "git+https://github.com/icalderoncaceres/react-redux-foundation.git"
   },
   "keywords": [
     "architecture",
     "react",
-    "reflux",
-    "keos_co"
+    "redux",
+    "foundation",
+    "Ivan Calderon"
   ],
-  "author": "Fernando Yara",
+  "author": "Iván Calderon",
   "license": "MIT licensed",
-  "homepage": "https://bitbucket.org/feryara/react_ethereal#readme"
+  "homepage": "https://github.com/icalderoncaceres/react-redux-foundation#readme"
 }

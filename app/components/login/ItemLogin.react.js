@@ -41,36 +41,22 @@ class Login extends React.Component {
     }
 
     /* return */
-    return (<div className="login_content column is-6 is-offset-3">
-
-      <div className="field">
-        <p className="control has-icons-left has-icons-right">
-          <input className="input" type="email" placeholder="Email" value={this.state.email} onChange={this._handleChange.bind(this)}/>
-          <span className="icon is-small is-left">
-            <i className="fas fa-envelope"></i>
-          </span>
-          <span className="icon is-small is-right">
-            <i className="fas fa-check"></i>
-          </span>
-        </p>
+    return (<form>
+      <div className="grid-container">
+        <div className="grid-x grid-padding-x">
+          <div className="medium-6 cell">
+            <label>Input Label
+              <input type="text" placeholder=".medium-6.cell" />
+            </label>
+          </div>
+          <div className="medium-6 cell">
+            <label>Input Label
+              <input type="text" placeholder=".medium-6.cell" />
+            </label>
+          </div>
+        </div>
       </div>
-      <div className="field">
-        <p className="control has-icons-left">
-          <input className="input" type="password" placeholder="Password"/>
-          <span className="icon is-small is-left">
-            <i className="fas fa-lock"></i>
-          </span>
-        </p>
-        {_alert}
-      </div>
-      <div className="field">
-        <p className="control">
-          <button className="button is-success is-12 column" onClick={this._login.bind(this)}>
-            Login
-          </button>
-        </p>
-      </div>
-    </div>);
+    </form>);
   }
 }
 
