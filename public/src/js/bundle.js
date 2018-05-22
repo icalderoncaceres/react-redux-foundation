@@ -27968,9 +27968,14 @@ var Login = function (_React$Component) {
               'div',
               { className: 'card-divider' },
               _react2.default.createElement(
-                'h4',
+                'h2',
                 null,
-                'Nivel de seguridad'
+                'Modulo administrativo ',
+                _react2.default.createElement(
+                  'small',
+                  null,
+                  'Nivel de Seguridad'
+                )
               )
             ),
             _react2.default.createElement(
@@ -27995,7 +28000,7 @@ var Login = function (_React$Component) {
               ),
               _react2.default.createElement(
                 'button',
-                { className: 'button column', onClick: this._login.bind(this) },
+                { className: 'button float-right', onClick: this._login.bind(this) },
                 'Login'
               )
             )

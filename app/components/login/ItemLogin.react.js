@@ -52,7 +52,7 @@ class Login extends React.Component {
     <div className="columns small-12 large-6 large-offset-3">
       <div className="card align-center">
         <div className="card-divider">
-          <h4>Nivel de seguridad</h4>
+          <h2>Modulo administrativo <small>Nivel de Seguridad</small></h2>
         </div>
         <div className="card-section">
           <input className="" type="email" placeholder="Email" value={this.state.email} onChange={this._handleChange.bind(this)}  autoComplete="off" />
@@ -66,7 +66,7 @@ class Login extends React.Component {
           <span className="">
             <i className="fas fa-lock"></i>
           </span>
-          <button className="button column" onClick={this._login.bind(this)}>
+          <button className="button float-right" onClick={this._login.bind(this)}>
             Login
           </button>        
         </div>
