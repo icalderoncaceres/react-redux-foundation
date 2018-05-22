@@ -27957,10 +27957,10 @@ var Login = function (_React$Component) {
       /* return */
       return _react2.default.createElement(
         'div',
-        { className: 'row' },
+        { className: 'grid-x grid-padding-x', style: { paddingTop: "10%" } },
         _react2.default.createElement(
           'div',
-          { className: 'columns small-12 large-6 large-offset-3' },
+          { className: 'small-12 medium-6 medium-offset-3' },
           _react2.default.createElement(
             'div',
             { className: 'card align-center' },

@@ -48,31 +48,33 @@ class Login extends React.Component {
 
 
     /* return */
-    return (<div className="row">
-    <div className="columns small-12 large-6 large-offset-3">
-      <div className="card align-center">
-        <div className="card-divider">
-          <h2>Modulo administrativo <small>Nivel de Seguridad</small></h2>
+    return (
+    <div className="grid-x grid-padding-x" style={{paddingTop:"10%"}}>
+      <div className="small-12 medium-6 medium-offset-3">
+        <div className="card align-center">
+          <div className="card-divider">
+            <h2>Modulo administrativo <small>Nivel de Seguridad</small></h2>
+          </div>
+          <div className="card-section">
+            <input className="" type="email" placeholder="Email" value={this.state.email} onChange={this._handleChange.bind(this)}  autoComplete="off" />
+            <span className="">
+              <i className="fas fa-envelope"></i>
+            </span>
+            <span className="">
+              <i className="fas fa-check"></i>
+            </span>
+            <input className="" type="password" placeholder="Password" value={this.state.password} onChange={this._handleChangePassw.bind(this)} autoComplete="off" />
+            <span className="">
+              <i className="fas fa-lock"></i>
+            </span>
+            <button className="button float-right" onClick={this._login.bind(this)}>
+              Login
+            </button>        
+          </div>
         </div>
-        <div className="card-section">
-          <input className="" type="email" placeholder="Email" value={this.state.email} onChange={this._handleChange.bind(this)}  autoComplete="off" />
-          <span className="">
-            <i className="fas fa-envelope"></i>
-          </span>
-          <span className="">
-            <i className="fas fa-check"></i>
-          </span>
-          <input className="" type="password" placeholder="Password" value={this.state.password} onChange={this._handleChangePassw.bind(this)} autoComplete="off" />
-          <span className="">
-            <i className="fas fa-lock"></i>
-          </span>
-          <button className="button float-right" onClick={this._login.bind(this)}>
-            Login
-          </button>        
-        </div>
-    </div>
-    {_alert}
-  </div></div>);
+        {_alert}
+      </div>
+  </div>);
   }
 }
 
