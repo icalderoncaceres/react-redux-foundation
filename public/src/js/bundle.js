@@ -27447,7 +27447,7 @@ var Nav = function (_React$Component) {
 							{ className: "dropdown menu", "data-dropdown-menu": true },
 							_react2.default.createElement(
 								"li",
-								{ className: "menu-text" },
+								null,
 								_react2.default.createElement(
 									"a",
 									{ href: "https://icalderoncaceres.github.io", target: "_blank" },
@@ -27550,12 +27550,334 @@ var Content = function (_React$Component) {
 	}
 
 	_createClass(Content, [{
-		key: 'render',
+		key: "render",
 		value: function render() {
 			return _react2.default.createElement(
-				'div',
+				"div",
 				null,
-				'Contenido'
+				_react2.default.createElement(
+					"div",
+					{ className: "callout large" },
+					_react2.default.createElement(
+						"div",
+						{ className: "row column text-center" },
+						_react2.default.createElement(
+							"h1",
+							null,
+							"Changing the World Through Design"
+						),
+						_react2.default.createElement(
+							"p",
+							{ className: "lead" },
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris."
+						),
+						_react2.default.createElement(
+							"a",
+							{ href: "#", className: "button large" },
+							"Learn More"
+						),
+						_react2.default.createElement(
+							"a",
+							{ href: "#", className: "button large hollow" },
+							"Learn Less"
+						)
+					)
+				),
+				_react2.default.createElement(
+					"article",
+					{ className: "grid-container" },
+					_react2.default.createElement(
+						"div",
+						{ className: "grid-x grid-margin-x" },
+						_react2.default.createElement(
+							"div",
+							{ className: "medium-6 cell small-order-2 medium-order-1" },
+							_react2.default.createElement(
+								"h2",
+								null,
+								"Our Agency, our selves."
+							),
+							_react2.default.createElement(
+								"p",
+								null,
+								"Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor."
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "medium-6 cell small-order-1 medium-order-2" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/750x350" })
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "grid-x grid-margin-x" },
+						_react2.default.createElement(
+							"div",
+							{ className: "medium-4 cell" },
+							_react2.default.createElement(
+								"h3",
+								null,
+								"Photoshop"
+							),
+							_react2.default.createElement(
+								"p",
+								null,
+								"Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna."
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "medium-4 cell" },
+							_react2.default.createElement(
+								"h3",
+								null,
+								"Javascript"
+							),
+							_react2.default.createElement(
+								"p",
+								null,
+								"Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna."
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "medium-4 cell" },
+							_react2.default.createElement(
+								"h3",
+								null,
+								"Marketing"
+							),
+							_react2.default.createElement(
+								"p",
+								null,
+								"Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna."
+							)
+						)
+					),
+					_react2.default.createElement("hr", null),
+					_react2.default.createElement(
+						"div",
+						{ className: "row column" },
+						_react2.default.createElement(
+							"ul",
+							{ className: "vertical medium-horizontal menu expanded text-center" },
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#" },
+									_react2.default.createElement(
+										"div",
+										{ className: "stat" },
+										"28"
+									),
+									_react2.default.createElement(
+										"span",
+										null,
+										"Websites"
+									)
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#" },
+									_react2.default.createElement(
+										"div",
+										{ className: "stat" },
+										"43"
+									),
+									_react2.default.createElement(
+										"span",
+										null,
+										"Apps"
+									)
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#" },
+									_react2.default.createElement(
+										"div",
+										{ className: "stat" },
+										"95"
+									),
+									_react2.default.createElement(
+										"span",
+										null,
+										"Ads"
+									)
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#" },
+									_react2.default.createElement(
+										"div",
+										{ className: "stat" },
+										"59"
+									),
+									_react2.default.createElement(
+										"span",
+										null,
+										"Cakes"
+									)
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#" },
+									_react2.default.createElement(
+										"div",
+										{ className: "stat" },
+										"18"
+									),
+									_react2.default.createElement(
+										"span",
+										null,
+										"Logos"
+									)
+								)
+							)
+						)
+					),
+					_react2.default.createElement("hr", null),
+					_react2.default.createElement(
+						"div",
+						{ className: "row column" },
+						_react2.default.createElement(
+							"h3",
+							null,
+							"Our Recent Work"
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "grid-x grid-margin-x medium-up-3 large-up-4" },
+						_react2.default.createElement(
+							"div",
+							{ className: "cell" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/550x550" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "cell" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/550x550" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "cell" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/550x550" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "cell" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/550x550" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "cell" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/550x550" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "cell" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/550x550" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "cell" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/550x550" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "cell" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/550x550" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "cell" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/550x550" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "cell" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/550x550" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "cell" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/550x550" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "cell" },
+							_react2.default.createElement("img", { className: "thumbnail", src: "https://placehold.it/550x550" })
+						)
+					),
+					_react2.default.createElement("hr", null)
+				),
+				_react2.default.createElement(
+					"article",
+					{ className: "grid-container" },
+					_react2.default.createElement(
+						"div",
+						{ className: "row column" },
+						_react2.default.createElement(
+							"ul",
+							{ className: "menu" },
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#" },
+									"One"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#" },
+									"Two"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#" },
+									"Three"
+								)
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								_react2.default.createElement(
+									"a",
+									{ href: "#" },
+									"Four"
+								)
+							)
+						)
+					)
+				)
 			);
 		}
 	}]);
