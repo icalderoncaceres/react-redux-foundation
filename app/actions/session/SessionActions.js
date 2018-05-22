@@ -18,12 +18,12 @@ const authF = (obj) => ({
 })
 
 /* auth success */
-export const doLogin = (user) =>{
+export const doLogin = (user,password) =>{
   return (dispatch)=>{
     /* BACK API*/
     var response = {
-      exist: (user == "f@g.com"),
-      name: 'fernando',
+      exist: true,
+      name: 'invitado',
       email: user
     }
     if(response.exist){

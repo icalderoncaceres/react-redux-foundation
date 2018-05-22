@@ -1,19 +1,29 @@
-/* dependecies */
+/* import react */
 import React from 'react';
-import { connect } from 'react-redux';
-import { authFail } from '../../actions/session/SessionActions';
-import { Link } from 'react-router-dom';
-/* class */
-class HomeContainer extends React.Component {
-  componentWillMount() {
-    // alert('Private home is at: ' + this.props.location.pathname)
-  }
+/* import other components */
+import Nav from '../../components/home/Nav.react';
+import Content from '../../components/home/Content.react';
 
-  render() {
-    return (<div>
-      <Link to="/test">Hola</Link>
-      <button onClick={this.props.logout}>Logout Here!</button>
-    </div>)
-  }
+/* action */
+//import {loadChats} from '../../actions/chat/ChatActions';
+
+class Home extends React.Component{
+	constructor(){
+		super();		
+	}
+
+	render(){
+		return(<div>
+				<Nav />
+				 <section className="container-fluid">
+				    <div className="columns is-table is-tablet is-desktop">
+                <Content />
+				    </div>
+				</section>
+			</div>
+
+		);
+	}
 }
-export default connect(null, {logout: authFail})(HomeContainer);
+
+export default Home;

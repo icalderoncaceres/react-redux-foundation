@@ -38,15 +38,10 @@ class Login extends React.Component {
 
   /* render */
   render() {
-
     let _alert;
     if(this.props.code == 999){
        _alert = (<div className="asd">No se logueo {this.props.email}</div>)
     }
-
-
-
-
     /* return */
     return (
     <div className="grid-x grid-padding-x" style={{paddingTop:"10%"}}>
@@ -71,6 +66,8 @@ class Login extends React.Component {
               Login
             </button>        
           </div>
+          <p className="lead">PUEDES ENTRAR CON CUALQUIER USUARIO Y CON CUALQUIER CLAVE</p>
+          <p className="lead">YOU CAN GET IN WITH ANY USER AND ANY PASSWORD</p>
         </div>
         {_alert}
       </div>

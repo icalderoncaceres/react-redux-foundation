@@ -5,7 +5,6 @@ import {Route, Switch} from 'react-router';
 import PrivateRoute from './session/PrivateRoute.react';
 import Login from './login/Login.react';
 import Home from './home/Home.react';
-import Chat from './chat/Chat.react'
 
 class App extends React.Component {
   constructor() {
@@ -17,8 +16,7 @@ class App extends React.Component {
 
       <Switch>
         <Route path="/login" component={Login}/>
-        <PrivateRoute exact={true} path="/" component={Chat}/>
-        <PrivateRoute path="/test" component={Home}/>
+        <PrivateRoute exact={true} path="/" component={Home}/>
       </Switch>
     </div>)
   }
