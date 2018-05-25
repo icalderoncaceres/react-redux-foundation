@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Route, Link, Redirect} from 'react-router-dom';
 
 class Nav extends React.Component{
 	constructor(){
@@ -16,15 +16,15 @@ class Nav extends React.Component{
 					<div className="top-bar-left">
 						<ul className="dropdown menu" data-dropdown-menu>
 							<li><a href="https://icalderoncaceres.github.io" target="_blank">Iván Calderon</a></li>
-							<li><a href="#0">React</a></li>
-							<li><a href="#0">Redux</a></li>
-							<li><a href="#0">Foundation</a></li>
+							<li><Link to="react">React</Link></li>
+							<li><Link to="redux">Redux</Link></li>
+							<li><Link to="foundation">Foundation</Link></li>
 						</ul>
 					</div>
 					<div className="top-bar-right">
 						<ul className="menu">
 							<li><input type="search" placeholder="Buscar"></input></li>
-							<li><button type="button" class="button">Buscar</button></li>
+							<li><button type="button" className="button">Buscar</button></li>
 						</ul>
 					</div>
 				</div>

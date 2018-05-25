@@ -17,7 +17,7 @@ class Home extends React.Component{
 				<Nav />
 				 <section className="container-fluid">
 				    <div className="columns is-table is-tablet is-desktop">
-                <Content />
+                		<Content />
 				    </div>
 				</section>
 			</div>
